@@ -1,0 +1,143 @@
+how to commit work  on GIT HUB.
+
+
+
+student@student-ThinkPad-X240:~$ git  --version
+Command 'git' not found, but can be installed with:
+sudo apt install git
+student@student-ThinkPad-X240:~$ sudo apt install git
+[sudo] password for student: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  linux-headers-5.8.0-25 linux-headers-5.8.0-25-generic
+  linux-image-5.8.0-25-generic linux-modules-5.8.0-25-generic
+  linux-modules-extra-5.8.0-25-generic
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 16 not upgraded.
+Need to get 5,764 kB of archives.
+After this operation, 41.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://ke.archive.ubuntu.com/ubuntu groovy/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+Get:2 http://ke.archive.ubuntu.com/ubuntu groovy/main amd64 git-man all 1:2.27.0-1ubuntu1 [911 kB]
+Get:3 http://ke.archive.ubuntu.com/ubuntu groovy/main amd64 git amd64 1:2.27.0-1ubuntu1 [4,827 kB]
+Fetched 5,764 kB in 5s (1,101 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 240332 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.27.0-1ubuntu1_all.deb ...
+Unpacking git-man (1:2.27.0-1ubuntu1) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.27.0-1ubuntu1_amd64.deb ...
+Unpacking git (1:2.27.0-1ubuntu1) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up git-man (1:2.27.0-1ubuntu1) ...
+Setting up git (1:2.27.0-1ubuntu1) ...
+Processing triggers for man-db (2.9.3-2) ...
+student@student-ThinkPad-X240:~$ git --version
+git version 2.27.0
+student@student-ThinkPad-X240:~$ git config --global user.name "brendagitau"
+student@student-ThinkPad-X240:~$ git config --global user.email "brendagittau@gmail.com"
+student@student-ThinkPad-X240:~$ git config --global list
+error: key does not contain a section: list
+student@student-ThinkPad-X240:~$ git config --global "list"
+error: key does not contain a section: list
+student@student-ThinkPad-X240:~$ it config --list
+it: command not found
+student@student-ThinkPad-X240:~$ git config --list
+user.name=brendagitau
+user.email=brendagittau@gmail.com
+student@student-ThinkPad-X240:~$ cd Desktop
+student@student-ThinkPad-X240:~/Desktop$ dir
+akira	   google-chrome-stable_current_amd64.deb  lovelacelab
+Brenda	   how\ to\ make\ folder		   try
+gengetone  lisalab
+student@student-ThinkPad-X240:~/Desktop$ cd akira
+student@student-ThinkPad-X240:~/Desktop/akira$ dir
+mutura.txt  soda.txt
+student@student-ThinkPad-X240:~/Desktop/akira$ git init
+Initialized empty Git repository in /home/student/Desktop/akira/.git/
+student@student-ThinkPad-X240:~/Desktop/akira$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+student@student-ThinkPad-X240:~/Desktop/akira$ git add .
+student@student-ThinkPad-X240:~/Desktop/akira$ git commit -m "first commit"
+[master (root-commit) 56fdac6] first commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mutura.txt
+ create mode 100644 soda.txt
+student@student-ThinkPad-X240:~/Desktop/akira$ git branch -M main
+student@student-ThinkPad-X240:~/Desktop/akira$ git remote add origin https://github.com/brendagitau/akira-folder-creation-linux.git
+student@student-ThinkPad-X240:~/Desktop/akira$ git push -u origin main
+Username for 'https://github.com': git push origin master
+Password for 'https://git push origin master@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/brendagitau/akira-folder-creation-linux.git/'
+student@student-ThinkPad-X240:~/Desktop/akira$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/brendagitau/akira-folder-creation-linux.git'
+student@student-ThinkPad-X240:~/Desktop/akira$ ^C
+student@student-ThinkPad-X240:~/Desktop/akira$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/brendagitau/akira-folder-creation-linux.git'
+student@student-ThinkPad-X240:~/Desktop/akira$ git push -u origin main
+Username for 'https://github.com': git push origin master
+Password for 'https://git push origin master@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/brendagitau/akira-folder-creation-linux.git/'
+student@student-ThinkPad-X240:~/Desktop/akira$ git push -u origin main
+Username for 'https://github.com': git origin master
+Password for 'https://git origin master@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/brendagitau/akira-folder-creation-linux.git/'
+student@student-ThinkPad-X240:~/Desktop/akira$ git push -u origin main
+Username for 'https://github.com': brendagitau
+Password for 'https://brendagitau@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 218 bytes | 218.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/brendagitau/akira-folder-creation-linux.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+student@student-ThinkPad-X240:~/Desktop/akira$ DIR
+DIR: command not found
+student@student-ThinkPad-X240:~/Desktop/akira$ dir
+mutura.txt  soda.txt
+student@student-ThinkPad-X240:~/Desktop/akira$ touch chipsmayai
+student@student-ThinkPad-X240:~/Desktop/akira$ git add .
+student@student-ThinkPad-X240:~/Desktop/akira$ git commit -m "2nd commit"
+[main 270cdbe] 2nd commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chipsmayai
+student@student-ThinkPad-X240:~/Desktop/akira$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/brendagitau/akira-folder-creation-linux.git'
+student@student-ThinkPad-X240:~/Desktop/akira$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/brendagitau/akira-folder-creation-linux.git'
+student@student-ThinkPad-X240:~/Desktop/akira$ git push
+Username for 'https://github.com': brendagitau
+Password for 'https://brendagitau@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 358 bytes | 358.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/brendagitau/akira-folder-creation-linux.git
+   56fdac6..270cdbe  main -> main
+student@student-ThinkPad-X240:~/Desktop/akira$ ^C
+student@student-ThinkPad-X240:~/Desktop/akira$ 
+
